@@ -10,6 +10,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
+      flash[:success] = "書籍を登録しました"
       redirect_to root_path
     else
       render :new
@@ -19,7 +20,18 @@ class BooksController < ApplicationController
   def show
   end
 
+  def edit
+    @book = Book.find(params[:id])
+  end
+
   def update
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      flash[:success] = "データを更新しました"
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy

@@ -1,0 +1,12 @@
+
+<%= form_for(@book) do |f| %>
+  <%= f.label :書籍コード %>
+  <%= f.text_field :book_code %>
+  <%= f.label :出版社コード %>
+  <%= f.number_field :publisher_code %>
+    <%= f.label :書籍名 %>
+  <%= f.text_field :book_title %>
+    <%= f.label :送信出版社コード %>
+  <%= f.number_field :sender_publisher_code %>
+  <%= f.submit "修正" %>
+<% end %>
