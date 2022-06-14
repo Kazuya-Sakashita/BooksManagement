@@ -6,7 +6,7 @@
                                :prompt => "出版社コードを選択" %>
     <%= f.label :書籍名 %>
   <%= f.text_field :book_title %>
-  <%= f.collection_select :publisher_code, Publisher.all, :id, :name,
+  <%= f.collection_select :sender_publisher_code, Publisher.all, :id, :name,
                                :prompt => "送信出版社コードを選択" %>
   <%= f.submit "登録" %>
 <% end %>
