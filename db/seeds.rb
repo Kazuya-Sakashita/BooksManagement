@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Publisher.create(name: "集英社")
+Publisher.create(name: "新潮社")
+Publisher.create(name: "朝日新聞社")
